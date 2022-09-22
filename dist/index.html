@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
 </head>
 <body>
-    <div id="content-div"></div>
+    <div id="content-div">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Todo-Webapp</h1>
+            </div>
+        
+
+        <div class="form-div">
+            <form id="add-todo">
+            <label for="Title">Title</label>
+            <input name="Title" type="text" class="user-input">
+            <label for="Description">Description</label>
+            <input name="Description" type="text" class="user-input">
+            <label for="DueDate">Due Date</label>
+            <input name="DueDate" type="date" class="user-input">
+            <label class="priority" for="Priority">Priority</label>
+            <select name="Priority" id="priority">
+                <option value="Low">Low</option>
+                <option value="Med">Med</option>
+                <option value="High">High</option>
+            </select>
+            <label for="Notes">Notes</label> 
+            <input name="Notes" type="text" class="user-input">
+            <label>Checklist</label>
+            <ul class="todo-ul"></ul>
+            </form>
+            <input type="text" id="add-to-checklist" name="add-new-item" placeholder="Food">
+         <button class="add-new-item">Add New Item to Checklist</button>
+         <br>
+         <button type="submit" class="submit-button">Submit Todo</button>
+         <button type="reset" class="reset-button" >Reset</button>
+        </div>
+      
+            
+      
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
