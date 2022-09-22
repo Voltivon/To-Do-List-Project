@@ -1,0 +1,28 @@
+{
+  "name": "to-do-list-project",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "scripts": {  
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Voltivon/To-Do-List-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Voltivon/To-Do-List-Project/issues"
+  },
+  "homepage": "https://github.com/Voltivon/To-Do-List-Project#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
