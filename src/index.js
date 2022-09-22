@@ -1,11 +1,12 @@
-import _ from 'lodash';
+import {createTodo} from "./createTodo.js";
+import {defaultProjectLoad} from "./defaultProjectLoad.js";
+import {domManip} from "./domManip.js";
 
-function component(){
-    const element = document.createElement('div');
+defaultProjectLoad();
 
-    element.innerHTML = _.join(['Hello', "webpack"], "");
+domManip();
 
-    return element;
-}
 
-document.body.appendChild(component());
+
+const todo1 = createTodo("afssf", "gggggg grovecer", "5/3/3")
+console.log("show properties from todo", todo1);
