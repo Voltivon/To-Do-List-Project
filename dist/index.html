@@ -16,21 +16,28 @@
         
 
         <div class="form-div">
+            <button class="add-todo-button">Add New Todo</button>
+            <div class="add-todo-form" style="display:none">
             <form id="add-todo">
+            <label for="project">Project:</label>
+            <select id="Project", name="Project">
+                <option value="Create-New-Project">Create New Project</option>
+                <option value="Default-Project">Default Project</option>
+            </select>
             <label for="Title">Title</label>
-            <input name="Title" type="text" class="user-input">
+            <input id="Title" name="Title" type="text" class="user-input">
             <label for="Description">Description</label>
-            <input name="Description" type="text" class="user-input">
+            <input id="Description" name="Description" type="text" class="user-input">
             <label for="DueDate">Due Date</label>
-            <input name="DueDate" type="date" class="user-input">
+            <input id="DueDate" name="DueDate" type="date" class="user-input">
             <label class="priority" for="Priority">Priority</label>
-            <select name="Priority" id="priority">
+            <select  id="Priority" name="Priority" id="priority">
                 <option value="Low">Low</option>
                 <option value="Med">Med</option>
                 <option value="High">High</option>
             </select>
             <label for="Notes">Notes</label> 
-            <input name="Notes" type="text" class="user-input">
+            <input id="Notes" name="Notes" type="text" class="user-input">
             <label>Checklist</label>
             <ul class="todo-ul"></ul>
             </form>
@@ -39,6 +46,7 @@
          <br>
          <button type="submit" class="submit-button">Submit Todo</button>
          <button type="reset" class="reset-button" >Reset</button>
+        </div>
         </div>
       
             

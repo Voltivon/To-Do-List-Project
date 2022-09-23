@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": false,
-
-  "watch":{
+  "watch": {
     "test": "{src,index}/*.js"
   },
   "scripts": {
@@ -30,6 +29,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "date-fns": "^2.29.3",
     "lodash": "^4.17.21",
     "npm-watch": "^0.11.0"
   }
