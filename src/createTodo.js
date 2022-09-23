@@ -1,12 +1,12 @@
 import {compareAsc, format, parseISO, startOfToday} from "date-fns";
-
+import { saveToDoLocal } from "./manageLocalStorage";
 import {clearForm} from './domManip';
 
 let toDoArray = [];
 
 
 
-export function createTodo(title, description, dueDate, priority, notes, checklist){
+export const createTodo = () => {
        
         let Title = document.getElementById('Title').value;
         let Description = document.getElementById('Description').value;
@@ -36,10 +36,16 @@ export function createTodo(title, description, dueDate, priority, notes, checkli
         }
 
         let CheckList = checklistArr.join(", ");
+
+        console.log("called createTodo module");
+        console.log({Title, Description, DueDate, Priority, Notes, CheckList})
+        console.log("pushing this object to array")
         toDoArray.push({Title, Description, DueDate, Priority, Notes, CheckList});
         console.log(toDoArray);
 
+        saveToDoLocal({Title, Description, DueDate, Priority, Notes, CheckList});
+
         clearForm();
 
-        return {title, description, dueDate, priority, notes, checklist};
+        return {Title, Description, DueDate, Priority, Notes, CheckList};
 }

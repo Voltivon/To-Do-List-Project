@@ -50,3 +50,35 @@ export function clearForm(){
     }
     document.getElementById("add-todo").reset();
 }
+
+export function displayToDo(){
+
+    const removeDivs = document.querySelectorAll(".card");
+    console.log("show me the node count", removeDivs);
+    for(let i = 0; i < removeDivs.length; i++){
+        removeDivs[i].remove();
+    }
+
+    console.log("display to screen");
+    const projects = document.querySelector(".projects");
+    const newCard = document.createElement("div");
+    newCard.classList.add(".card");
+    projects.appendChild(newCard);
+
+    let Title = localStorage.getItem("Title");
+    let Description = localStorage.getItem("Description");
+    let DueDate = localStorage.getItem("DueDate");
+    let Priority = localStorage.getItem("Priority");
+    let Notes = localStorage.getItem("Notes");
+    let CheckList = localStorage.getItem("CheckList");
+
+    let _displayArray = {Title, Description, DueDate, Priority, Notes, CheckList};
+    console.log(_displayArray);
+
+    for(let key in _displayArray){
+        console.log(`${key}: ${_displayArray[key]}`);
+        const para = document.createElement('p');
+        para.textContent = (`${key}: ${_displayArray[key]}`);
+        newCard.appendChild(para);
+    }
+}
